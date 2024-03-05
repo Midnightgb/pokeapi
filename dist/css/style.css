@@ -60,8 +60,7 @@
   width: 24px;
   height: 24px;
 }
-
-/* .switch:hover */.sun svg {
+.sun svg {
   animation: rotate 15s linear infinite;
 }
 
@@ -75,8 +74,7 @@
     transform: rotate(360deg);
   }
 }
-
-/* .switch:hover */.moon svg {
+.moon svg {
   animation: tilt 5s linear infinite;
 }
 
@@ -111,7 +109,7 @@
   transform: translateX(30px);
 }
 
-.loader2{
+#loader2{
   position: fixed;
   background: rgb(54, 54, 54); 
   z-index: 9999; 
