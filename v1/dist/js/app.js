@@ -67,8 +67,6 @@ function pokemonsLoad(endpoint) {
     });
 }
 
-
-
 function verPokemon(url) {
   fetch(url)
     .then(datosPokemon => datosPokemon.json())
@@ -77,7 +75,7 @@ function verPokemon(url) {
       nombrePokemon.innerHTML = `${dataPokemon.name}`;
       let pokemonSprite = dataPokemon.sprites.versions["generation-v"]["black-white"]["animated"]["front_default"] ? dataPokemon.sprites.versions["generation-v"]["black-white"]["animated"]["front_default"] : dataPokemon.sprites["other"]["official-artwork"]["front_default"];
       imgPokemon.setAttribute("src", pokemonSprite);
-      tituloPg.innerHTML= `${dataPokemon.name} | Pokédex`;
+      tituloPg.innerHTML = `${dataPokemon.name} | Pokédex`;
       iconPg.setAttribute("href", dataPokemon.sprites.other.dream_world.front_default);
       estadisticasPokemon.setAttribute("class", "border border-primary col-sm-4 col-md-3 shadow");
       var estadisticas = `<div class="my-3">
@@ -127,12 +125,12 @@ function verPokemon(url) {
         <div class="progress-bar bg-info text-dark" style="width: ${dataPokemon.stats[5].base_stat}%">${dataPokemon.stats[5].base_stat}</div>
       </div>
     </div>`;
-    var pesoFormateado = (dataPokemon.weight / 10).toFixed(1); 
-    var alturaFormateada = (dataPokemon.height / 10).toFixed(1); 
+      var pesoFormateado = (dataPokemon.weight / 10).toFixed(1);
+      var alturaFormateada = (dataPokemon.height / 10).toFixed(1);
 
 
-    alturaPeso.setAttribute("class", "col-md-2 col-sm-2 col-lg-1 d-flex flex-column-reverse");
-    var alturaPesoPk = `
+      alturaPeso.setAttribute("class", "col-md-2 col-sm-2 col-lg-1 d-flex flex-column-reverse");
+      var alturaPesoPk = `
                 <div class="border border-primary border-top-0">
                   <p><img src="./dist/img/icons8-altura-48.png" alt="">${alturaFormateada}m</p>
                 </div>
@@ -141,11 +139,10 @@ function verPokemon(url) {
                   <p><img src="./dist/img/icons8-peso-kg-48.png" alt="">${pesoFormateado}kg</p>
                 </div>`;
 
-    alturaPeso.innerHTML = alturaPesoPk;
-    estadisticasPokemon.innerHTML = estadisticas;
+      alturaPeso.innerHTML = alturaPesoPk;
+      estadisticasPokemon.innerHTML = estadisticas;
     });
 }
-
 
 function cambiarTema() {
   var htmlElement = document.getElementById("htmlElement");
