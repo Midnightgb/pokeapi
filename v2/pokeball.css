@@ -26,7 +26,6 @@
   aspect-ratio: 1;
   position: relative;
   background: radial-gradient(at 75% 15%,#fffb,#0000 35%);
-  /* animation: l20 1s infinite cubic-bezier(0.5,120,0.5,-120); */
 }
 /* BAND */
 .pokeball .band {
@@ -90,4 +89,9 @@
   background: radial-gradient(at 80% 60%,#0000,#0008),linear-gradient(var(--pokeball-white) 0 0) bottom/100% calc(50% - 5px);
   background-repeat: no-repeat;
   z-index: -2;
+}
+/* ANIMATION */
+.pokeball:hover{
+  cursor: pointer;
+  animation: l20 1s infinite cubic-bezier(0.5,120,0.5,-120);
 }
