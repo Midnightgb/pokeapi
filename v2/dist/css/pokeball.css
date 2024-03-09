@@ -15,10 +15,10 @@
 
 /* COLORS */
 :root {
-  --pokeball-red: #e52129;
-  --pokeball-white: #efefef;
-  --pokeball-band: #000000;
-  --pokeball-inside: #dfe7e6;
+  --red: #e52129;
+  --white: #f0ebeb;
+  --black: #000000;
+  --light-gray: #dfe7e6;
 }
 /* CONTAINER */
 .pokeball {
@@ -27,22 +27,34 @@
   position: relative;
   background: radial-gradient(at 75% 15%,#fffb,#0000 35%);
 }
+/* TOP */
+.pokeball .top-half{
+  background: linear-gradient(var(--red) 0 0) top/100% calc(50% - 4px);
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+/* BOTTOM */
+.pokeball .bottom-half{
+  background: linear-gradient(var(--white) 0 0) bottom/100% calc(50% - 4px);
+  background-repeat: no-repeat;
+  z-index: -2;
+}
 /* BAND */
 .pokeball .band {
   position: absolute;
   top: 50%;
-  left: 0;
   width: 100%;
+  left: 0;
   height: 10%;
-  background: linear-gradient(90deg, var(--pokeball-band) 0%, var(--pokeball-band) 60%, rgb(28, 28, 28) 70%, var(--pokeball-band) 89%);
+  background: linear-gradient(90deg, var(--black) 0%, var(--black) 60%, rgb(28, 28, 28) 70%, var(--black) 89%);
   transform: translateY(-50%);
 }
 /* CENTER */
 .pokeball .band .center {
   width: 10%;
-  background: var(--pokeball-red);
+  background: var(--red);
   border-width: 10px;
-  border-color: var(--pokeball-band);
+  border-color: var(--black);
 }
 /* COMMON STYLES WITH PSEUDO ELEMENTS */
 .pokeball .band .center, .pokeball .band .center::after, .pokeball .band .center::before{
@@ -65,12 +77,12 @@
 /* PSEUDO ELEMENT BEFORE */
 .pokeball .band .center::before {
   border-width: 6px;
-  border-color: var(--pokeball-white);
+  border-color: var(--white);
 }
 /* PSEUDO ELEMENT AFTER */
 .pokeball .band .center::after {
   border-width: 2px;
-  border-color: var(--pokeball-band);
+  border-color: var(--black);
 }
 /* COMMON STYLES TOP AND BOTTOM */
 .pokeball .top-half, .pokeball .bottom-half{
@@ -78,18 +90,6 @@
   width: 100%;
   height: 100%;
   border-radius: 50%;
-}
-/* TOP */
-.pokeball .top-half{
-  background: linear-gradient(var(--pokeball-red) 0 0) top/100% calc(50% - 5px);
-  background-repeat: no-repeat;
-  z-index: -1;
-}
-/* BOTTOM */
-.pokeball .bottom-half{
-  background: radial-gradient(at 80% 60%,#0000,#0008),linear-gradient(var(--pokeball-white) 0 0) bottom/100% calc(50% - 5px);
-  background-repeat: no-repeat;
-  z-index: -2;
 }
 /* ANIMATION */
 .pokeball:hover{
