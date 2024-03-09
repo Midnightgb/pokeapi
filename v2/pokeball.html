@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="./dist/css/pokeball.css">
-  <script src="./dist/js/test-three.js"></script>
+  <link rel="stylesheet" href="./dist/css/tailwind/output.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.min.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/127738/OrbitControls.js"></script>
 </head>
 <body>
-  <div class="pokeballkk"></div>
-
   <section class="pokeball">
     <div class="top-half"></div>
     <div class="band">
@@ -17,7 +17,11 @@
     </div>
     <div class="bottom-half"></div>
   </section>
-  <div id="container"></div>
-
+  <!-- <div id="container"></div> -->
+  <script src="./dist/js/test-three.js"></script>
+  
 </body>
 </html>
+<!-- 
+  npx tailwindcss -i ./dist/css/tailwind/input.css -o ./dist/css/tailwind/output.css --watch
+-->

@@ -1,3 +1,4 @@
+
 var scene = new THREE.Scene();
 scene.name = 'Scene';
 
@@ -31,7 +32,6 @@ function init() {
 
     container.appendChild(renderer.domElement);
 
-    window.addEventListener('resize', onResize, false);
 
 }
 
@@ -177,6 +177,7 @@ function setupLight() {
     // let helper = new THREE.CameraHelper( directionalLight.shadow.camera );
     // helper.name = 'DirectionalLight CameraHelper';
     // scene.add( helper );
+
 
 }
 
