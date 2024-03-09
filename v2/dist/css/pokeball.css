@@ -1,18 +1,3 @@
-@keyframes l20 {
-
-  30%,70% {
-    transform: rotate(0deg)
-  }
-
-  49.99% {
-    transform: rotate(0.2deg)
-  }
-
-  50% {
-    transform: rotate(-0.2deg)
-  }
-}
-
 /* COLORS */
 :root {
   --red: #e52129;
@@ -20,25 +5,38 @@
   --black: #000000;
   --light-gray: #dfe7e6;
 }
+
 /* CONTAINER */
 .pokeball {
   height: 90px;
   aspect-ratio: 1;
   position: relative;
-  background: radial-gradient(at 75% 15%,#fffb,#0000 35%);
+  background: radial-gradient(at 75% 15%, #fffb, #0000 35%);
 }
+
+/* COMMON STYLES TOP AND BOTTOM */
+.pokeball .top-half,
+.pokeball .bottom-half {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
 /* TOP */
-.pokeball .top-half{
+.pokeball .top-half {
   background: linear-gradient(var(--red) 0 0) top/100% calc(50% - 4px);
   background-repeat: no-repeat;
   z-index: -1;
 }
+
 /* BOTTOM */
-.pokeball .bottom-half{
+.pokeball .bottom-half {
   background: linear-gradient(var(--white) 0 0) bottom/100% calc(50% - 4px);
   background-repeat: no-repeat;
   z-index: -2;
 }
+
 /* BAND */
 .pokeball .band {
   position: absolute;
@@ -49,6 +47,7 @@
   background: linear-gradient(90deg, var(--black) 0%, var(--black) 60%, rgb(28, 28, 28) 70%, var(--black) 89%);
   transform: translateY(-50%);
 }
+
 /* CENTER */
 .pokeball .band .center {
   width: 10%;
@@ -56,8 +55,11 @@
   border-width: 10px;
   border-color: var(--black);
 }
+
 /* COMMON STYLES WITH PSEUDO ELEMENTS */
-.pokeball .band .center, .pokeball .band .center::after, .pokeball .band .center::before{
+.pokeball .band .center,
+.pokeball .band .center::after,
+.pokeball .band .center::before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -68,31 +70,45 @@
   border-style: solid;
   box-sizing: unset;
 }
+
 /* PSEUDO ELEMENTS */
-.pokeball .band .center::after, .pokeball .band .center::before{
+.pokeball .band .center::after,
+.pokeball .band .center::before {
   content: "";
   width: 100%;
   background: rgba(0, 0, 0, 0);
 }
+
 /* PSEUDO ELEMENT BEFORE */
 .pokeball .band .center::before {
   border-width: 6px;
   border-color: var(--white);
 }
+
 /* PSEUDO ELEMENT AFTER */
 .pokeball .band .center::after {
   border-width: 2px;
   border-color: var(--black);
 }
-/* COMMON STYLES TOP AND BOTTOM */
-.pokeball .top-half, .pokeball .bottom-half{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-}
+
 /* ANIMATION */
-.pokeball:hover{
+.pokeball:hover {
   cursor: pointer;
-  animation: l20 1s infinite cubic-bezier(0.5,120,0.5,-120);
+  animation: l20 1s infinite cubic-bezier(0.5, 120, 0.5, -120);
+}
+
+@keyframes l20 {
+
+  30%,
+  70% {
+    transform: rotate(0deg)
+  }
+
+  49.99% {
+    transform: rotate(0.2deg)
+  }
+
+  50% {
+    transform: rotate(-0.2deg)
+  }
 }
