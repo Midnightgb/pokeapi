@@ -5,13 +5,16 @@
   --black: #000000;
   --light-gray: #dfe7e6;
 }
-
+body {
+  background: rgb(2, 2, 2);
+}
 /* CONTAINER */
 .pokeball {
   height: 90px;
   aspect-ratio: 1;
   position: relative;
-  background: radial-gradient(at 75% 15%, #fffb, #0000 35%);
+  animation: shake 1s infinite cubic-bezier(0.5, 120, 0.5, -120);
+
 }
 
 /* COMMON STYLES TOP AND BOTTOM */
@@ -25,14 +28,14 @@
 
 /* TOP */
 .pokeball .top-half {
-  background: linear-gradient(var(--red) 0 0) top/100% calc(50% - 4px);
+  background: radial-gradient(at 75% 15%, #fffb, #0000 35%),linear-gradient(var(--red) 0 0) top/100% calc(50% - 4px);
   background-repeat: no-repeat;
   z-index: -1;
 }
 
 /* BOTTOM */
 .pokeball .bottom-half {
-  background: linear-gradient(var(--white) 0 0) bottom/100% calc(50% - 4px);
+  background: radial-gradient(at 100% 80%, rgba(123, 123, 123, 0.733), #0000 35%), linear-gradient(var(--white) 0 0) bottom/100% calc(50% - 4px);
   background-repeat: no-repeat;
   z-index: -2;
 }
@@ -94,21 +97,19 @@
 /* ANIMATION */
 .pokeball:hover {
   cursor: pointer;
-  animation: l20 1s infinite cubic-bezier(0.5, 120, 0.5, -120);
 }
 
-@keyframes l20 {
-
+@keyframes shake {
   30%,
   70% {
-    transform: rotate(0deg)
+    transform: rotate(0deg) translate(0, 0);
   }
 
   49.99% {
-    transform: rotate(0.2deg)
+    transform: rotate(0.2deg) translate(-.02px, -.02px);
   }
 
   50% {
-    transform: rotate(-0.2deg)
+    transform: rotate(-0.2deg) translate(.02px, .02px);
   }
 }

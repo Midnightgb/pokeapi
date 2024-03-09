@@ -14,7 +14,6 @@
   <link rel="stylesheet" href="./dist/css/main.css">
   <link rel="stylesheet" href="./dist/css/card.css">
   <link rel="stylesheet" href="./dist/css/tailwind/output.css">
-
 </head>
 
 <body>
@@ -22,43 +21,8 @@
   <div id="loader" class="loader">
     <img src="dist/img/pokepikachu.gif" alt="">
   </div>
-  <article class="card">
-    <section class="card-content">
-      <section class="back">
-        <div class="back-card-content">
-          <strong>Hover Me</strong>
-        </div>
-      </section>
-
-      <section class="front">
-        <div class="img">
-          <div class="circle">
-          </div>
-          <div class="circle" id="right">
-          </div>
-          <div class="circle" id="bottom">
-          </div>
-        </div>
-  
-        <div class="front-card-content">
-          <small class="badge">Pasta</small>
-          <div class="description">
-            <div class="title">
-              <p class="title">
-                <strong>Spaguetti Bolognese</strong>
-              </p>
-              <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997"><g transform="scale(8,8)"><path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path></g></g></svg>
-            </div>
-            <p class="card-footer">
-              30 Mins &nbsp; | &nbsp; 1 Serving
-            </p>
-          </div>
-        </div>
-      </section>
-    </section>
-  </article>
-<!--  -->
-  <div>
+  <!--  -->
+  <main>
     <article class="mt-5">
       <h1 style="text-transform: capitalize;" id="nombrePokemon">POKEMON</h1>
       <div class="row m-5 justify-content-center">
@@ -68,17 +32,48 @@
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/769px-Pokebola-pokeball-png-0.png">
         </div>
 
+        <article class="card">
+          <section class="card-content">
+            <section class="back">
+              <div class="back-card-content">
+                <strong>Hover Me</strong>
+              </div>
+            </section>
+
+            <section class="front">
+              <div class="img">
+                <div class="circle">
+                </div>
+                <div class="circle" id="right">
+                </div>
+                <div class="circle" id="bottom">
+                </div>
+              </div>
+              <section class="pokeball">
+                <div class="top-half"></div>
+                <div class="band">
+                  <div class="center"></div>
+                </div>
+                <div class="bottom-half"></div>
+              </section>
+              <div class="front-card-content">
+                <small class="badge">Pasta</small>
+                <div class="description">
+                  <div class="title">
+                    <p class="title">
+                      <strong>Spaguetti Bolognese</strong>
+                    </p>
+                  </div>
+                  <p class="card-footer">
+                    30 Mins &nbsp; | &nbsp; 1 Serving
+                  </p>
+                </div>
+              </div>
+            </section>
+          </section>
+        </article>
     </article>
-    <section class="pokeball">
-      <div class="top-half"></div>
-      <div class="band">
-        <div class="center"></div>
-      </div>
-      <div class="bottom-half"></div>
-    </section>
-
-  </div>
-
+  </main>
 </body>
 
 </html>
