@@ -1,9 +1,12 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+const withMT = require("@material-tailwind/html/utils/withMT");
+
+module.exports = withMT({
   content: ["./*.{html,js}"],
   theme: {
       container: {
         center: true,
     },
+    darkMode: ['selector', '[data-mode="dark"]'],
   },
-}
+});

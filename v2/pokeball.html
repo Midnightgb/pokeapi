@@ -1,26 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Pokedex</title>
   <link rel="stylesheet" href="./dist/css/pokeball.css">
   <link rel="stylesheet" href="./dist/css/tailwind/output.css">
+  <!-- Material Icons Link -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+  <!-- Font Awesome Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+    crossorigin="anonymous" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.min.js"></script>
   <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/127738/OrbitControls.js"></script>
+  <script src="./dist/js/theme.js"></script>
 </head>
-<body>
-  <section class="pokeball">
+
+<body class="bg-white dark:bg-gray-900">
+  <button
+    class="middle none rounded-lg bg-gray-900 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+    Button
+  </button>
+  
+  <main class="container border border-red-500 p-5 ">
+    <article>
+      <h1 class="text-3xl font-bold">Pokedex</h1>
+      <div class="bg-white dark:bg-slate-800 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl">
+        <div>
+          <span class="inline-flex items-center justify-center p-2 bg-indigo-500 rounded-md shadow-lg">
+            <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" aria-hidden="true"></svg>
+          </span>
+        </div>
+        <h3 class="text-slate-900 dark:text-white mt-5 text-base font-medium tracking-tight">Writes Upside-Down</h3>
+        <p class="text-slate-500 dark:text-slate-400 mt-2 text-sm">
+          The Zero Gravity Pen can be used to write in any orientation, including upside-down. It even works in outer
+          space.
+        </p>
+      </div>
+
+    </article>
+  </main>
+  <div class="relative flex flex-col mt-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-96">
+    <div
+      class="relative h-56 mx-4 -mt-6 overflow-hidden text-white shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
+      <img
+        src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80"
+        alt="card-image" />
+    </div>
+    <div class="p-6">
+      <h5 class="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+        UI/UX Review Check
+      </h5>
+      <p class="block font-sans text-base antialiased font-light leading-relaxed text-inherit">
+        The place is close to Barceloneta Beach and bus stop just 2 min by walk
+        and near to "Naviglio" where you can enjoy the main night life in
+        Barcelona.
+      </p>
+    </div>
+    <div class="p-6 pt-0">
+      <button
+        class="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-gray-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
+        type="button">
+        Read More
+      </button>
+    </div>
+  </div>  
+  <!--   <section class="pokeball">
     <div class="top-half"></div>
     <div class="band">
       <div class="center"></div>
     </div>
     <div class="bottom-half"></div>
   </section>
-  <!-- <div id="container"></div> -->
+  <div id="container"></div> -->
   <script src="./dist/js/test-three.js"></script>
-  
 </body>
+
 </html>
 <!-- 
   npx tailwindcss -i ./dist/css/tailwind/input.css -o ./dist/css/tailwind/output.css --watch

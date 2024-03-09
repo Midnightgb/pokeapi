@@ -5,9 +5,6 @@
   --black: #000000;
   --light-gray: #dfe7e6;
 }
-body {
-  background: rgb(2, 2, 2);
-}
 /* CONTAINER */
 .pokeball {
   height: 90px;
